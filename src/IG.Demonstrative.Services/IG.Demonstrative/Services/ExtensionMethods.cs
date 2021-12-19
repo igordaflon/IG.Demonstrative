@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using IG.Demonstrative.Context;
 using Microsoft.EntityFrameworkCore;
+using IG.Demonstrative.Services.Customers;
 
 namespace IG.Demonstrative.Services
 {
@@ -12,6 +13,7 @@ namespace IG.Demonstrative.Services
         public static void AddDemonstrativeServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddRepositories(configuration);
+            services.AddScoped<ICustomerService, CustomerService>();
         }
 
         public static IHost MigrateDatabase(this IHost host)

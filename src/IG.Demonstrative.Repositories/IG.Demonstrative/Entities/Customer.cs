@@ -13,5 +13,8 @@ namespace IG.Demonstrative.Entities
         public string Name { get; set; }
 
         public DateTime RegistrationDate { get; set; }
+
+        public bool IsActive { get; set; }   
+        public bool IsDeleted { get; set; }   
     }
 }
