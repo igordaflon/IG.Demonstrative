@@ -21,7 +21,5 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 
 - Após clonar o projeto e abri-lo, será necessário alterar a ConnectionString nos segredos de usuário para a aplicação criar automaticamente o banco de dados em sua máquina.
 
-1) Com a aplicação aberta, clique com o botão direito sobre o projeto 'IG.Demonstrative.UI' e selecione a opção ''
-
-
-
+1) Com a aplicação aberta, clique com o botão direito sobre o projeto 'IG.Demonstrative.UI' e selecione a opção 'Gerenciar segredos do usuário'
+![secretuser](https://user-images.githubusercontent.com/46754325/146681081-386c568e-52b1-47fb-8f06-520b8230b124.jpg)
