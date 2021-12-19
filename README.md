@@ -19,5 +19,9 @@ Para executar o projeto, você precisá de:
 
 Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
+- Após clonar o projeto e abri-lo, será necessário alterar a ConnectionString nos segredos de usuário para a aplicação criar automaticamente o banco de dados em sua máquina.
+
+1) Com a aplicação aberta, clique com o botão direito sobre o projeto 'IG.Demonstrative.UI' e selecione a opção ''
+
 
 
