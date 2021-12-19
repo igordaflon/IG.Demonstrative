@@ -1,6 +1,6 @@
 # IG.Demonstrative
 
-Construção de uma aplicação .NET 6
+Construção de uma aplicação .NET 6 com SQLServer
 
 ## 🚀 Começando
 
