@@ -24,4 +24,6 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 1) Com a aplicação aberta, clique com o botão direito sobre o projeto 'IG.Demonstrative.UI' e selecione a opção 'Gerenciar segredos do usuário'
 ![secretuser](https://user-images.githubusercontent.com/46754325/146681081-386c568e-52b1-47fb-8f06-520b8230b124.jpg)
 
-2) Após abrir o 'Gerenciar segredos do usuário'
+2) Após abrir o 'Gerenciar segredos do usuário', a propriedade 'Demonstrative_SqlServer' deve ser ajustada com a ConnectionString do seu ambiente. A 'Demonstrative_Provider' não precisa ser alterada, essa propriedade foi colocada para no futuro, o usuário escolher em qual banco de dados ele quer rodar a aplicação, mas no momento só está configurada para o SqlServer.
+Valor aceito na 'Demonstrative_Provider': SqlServer
+![Captura de tela 2021-12-20 094615](https://user-images.githubusercontent.com/46754325/146769535-43014800-e310-4a25-ba9e-142c46cbe97a.png)
