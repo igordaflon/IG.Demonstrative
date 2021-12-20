@@ -23,3 +23,5 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 
 1) Com a aplicação aberta, clique com o botão direito sobre o projeto 'IG.Demonstrative.UI' e selecione a opção 'Gerenciar segredos do usuário'
 ![secretuser](https://user-images.githubusercontent.com/46754325/146681081-386c568e-52b1-47fb-8f06-520b8230b124.jpg)
+
+2) Após abrir o 'Gerenciar segredos do usuário'
