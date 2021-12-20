@@ -27,3 +27,5 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 2) Após abrir o 'Gerenciar segredos do usuário', a propriedade 'Demonstrative_SqlServer' deve ser ajustada com a ConnectionString do seu ambiente. A 'Demonstrative_Provider' não precisa ser alterada, essa propriedade foi colocada para no futuro, o usuário escolher em qual banco de dados ele quer rodar a aplicação, mas no momento só está configurada para o SqlServer.
 Valor aceito na 'Demonstrative_Provider': SqlServer
 ![Captura de tela 2021-12-20 094615](https://user-images.githubusercontent.com/46754325/146769535-43014800-e310-4a25-ba9e-142c46cbe97a.png)
+
+3) Após salvar o 'Gerenciar segredos do usuário', a aplicação poderá ser rodada e se a ConnectionString for válida, o banco de dados será criado automaticamente.
