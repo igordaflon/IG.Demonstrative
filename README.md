@@ -8,7 +8,7 @@ As instruções a seguir permitirão que você obtenha uma cópia do projeto na 
 
 ### 📋 Pré-requisitos
 
-Para executar o projeto, você precisá de:
+Para executar o projeto, você precisará de:
 
 - SQLServer (caso ainda não tenha instalado, recomendo instalar o Express. Link: https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - Visual Studio 2019 ou superior (Necessária a dependência do ASP.NET e desenvolvimento Web)
