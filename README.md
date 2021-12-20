@@ -33,7 +33,7 @@ Valor aceito na 'Demonstrative_Provider': SqlServer
 
 ## ✒️ Autores
 
-* **Um desenvolvedor** - [umdesenvolvedor](https://github.com/igordaflon)
+* **DEV** - [Igor Daflon](https://github.com/igordaflon)
 
 
 ## 🎁 Expressões de gratidão
