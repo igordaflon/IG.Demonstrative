@@ -13,7 +13,10 @@ namespace IG.Demonstrative.Services
         public static void AddDemonstrativeServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddRepositories(configuration);
-            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ICustomerQueryService, CustomerQueryService>();
+            services.AddScoped<ICustomerCreationService, CustomerCreationService>();
+            services.AddScoped<ICustomerUpdateService, CustomerUpdateService>();
+            services.AddScoped<ICustomerDeletionService, CustomerDeletionService>();
         }
 
         public static IHost MigrateDatabase(this IHost host)

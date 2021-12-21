@@ -2,9 +2,8 @@
 
 namespace IG.Demonstrative.Services.Customers
 {
-    public interface ICustomerService
+    public interface ICustomerCreationService
     {
         Task<int> CreateAsync(CustomerEditModel data);
-        Task<IReadOnlyList<CustomerItem>> GetAllAsync();
     }
 }

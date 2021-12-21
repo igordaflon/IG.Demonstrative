@@ -6,34 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace IG.Demonstrative.Services.Customers
 {
-    public class CustomerService : ICustomerService
+    public class CustomerCreationService : ICustomerCreationService
     {
-
         private readonly MainContext context;
 
-        public CustomerService(MainContext context)
+        public CustomerCreationService(MainContext context)
         {
             this.context = context;
-        }
-
-        /// <summary>
-        /// Esse método retorna uma ReadOnlyList com todos os clientes ativos
-        /// </summary>
-        public async Task<IReadOnlyList<CustomerItem>> GetAllAsync()
-        {
-            return await context.Customer
-                .Where(i => !i.IsDeleted)
-                .OrderBy(i => i.Name)
-                .Select(i => new CustomerItem
-                {
-                    Id = i.Id,
-                    Name = i.Name,
-                    IsActive = i.IsActive,
-                    IsDeleted = i.IsDeleted,
-                    RegistrationDate = i.RegistrationDate
-                })
-                .Take(100)
-                .ToListAsync();
         }
 
         /// <summary>
