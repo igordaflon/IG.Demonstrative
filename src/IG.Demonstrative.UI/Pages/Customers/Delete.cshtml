@@ -1,0 +1,22 @@
+﻿@page "/cliente/{id}/excluir"
+@model IG.Demonstrative.UI.Pages.Customers.DeleteModel
+@{
+    ViewData["Title"] = "Excluir Cliente";
+}
+
+<div class="row">
+    <div class="card w-100">
+        <div class="card-body">
+            <h4>Excluir Cliente</h4>
+
+            <hr />
+
+            @{await Html.RenderPartialAsync("_Details", Model.Data);}
+
+            <hr />
+
+            @{await Html.RenderPartialAsync("_Delete", (Model.CannotProceed, Model.ErrorMessage, $"/cliente/{Model.Data.Id}"));}
+
+        </div>
+    </div>
+</div>

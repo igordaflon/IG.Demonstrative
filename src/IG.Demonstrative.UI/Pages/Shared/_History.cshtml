@@ -1,0 +1,28 @@
+﻿@model IReadOnlyCollection<IG.Demonstrative.Models.HistoryItem>
+<table class="table table-sm table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().DateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Description)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.Id)</td>
+                <td>@Html.DisplayFor(model => item.DateTime)</td>
+                <td>
+                    <span style="white-space: pre-line">@Html.DisplayFor(model => item.Description)</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

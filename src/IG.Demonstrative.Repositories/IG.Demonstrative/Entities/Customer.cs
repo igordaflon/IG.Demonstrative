@@ -4,8 +4,6 @@ namespace IG.Demonstrative.Entities
 {
     public class Customer
     {
-        public IEnumerable<Customer> Customers { get; set; }
-
         public int Id { get; set; }
 
         [Required]

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using IG.Demonstrative.UI.Utilities
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -46,6 +47,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    @Html.PageScripts()
     
 </body>
 </html>

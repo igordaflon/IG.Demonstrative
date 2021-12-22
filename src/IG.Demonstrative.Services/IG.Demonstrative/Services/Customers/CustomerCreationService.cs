@@ -36,6 +36,8 @@ Ativo: {(data.IsActive ? "Sim" : "Não")}";
                 IsActive = data.IsActive,
                 RegistrationDate = DateTime.Now,
             };
+            context.Customer.Add(customer);
+            await context.SaveChangesAsync();
 
             var history = new CustomerHistory
             {
@@ -43,10 +45,8 @@ Ativo: {(data.IsActive ? "Sim" : "Não")}";
                 CustomerId = customer.Id,
                 DateTime = DateTime.Now,
             };
-
-            context.Customer.Add(customer);
+            
             context.CustomerHistory.Add(history);
-
             await context.SaveChangesAsync();
 
             return customer.Id;

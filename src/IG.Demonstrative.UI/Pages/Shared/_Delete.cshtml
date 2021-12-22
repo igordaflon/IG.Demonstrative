@@ -1,0 +1,61 @@
+﻿@using IG.Demonstrative.UI.Utilities
+@model (string CannotProceed, string ErrorMessage, string BackUrl)
+
+@if (string.IsNullOrEmpty(Model.CannotProceed))
+{
+    <form id="mainForm" method="post">
+        <div class="row form-group">
+            <div class="offset-md-3 col-md-9">
+                <div class="alert alert-warning" role="alert">Tem certeza que deseja prosseguir com a exclusão deste registro?</div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="offset-md-3 col-md-9">
+                <input id="confirmation" type="checkbox" class="material-inputs filled-in chk-col-gray-pg" />
+                <label for="confirmation">Sim, eu realmente quero excluir este registro.</label>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <span class="text-danger" style="white-space: pre-line">@Model.ErrorMessage</span>
+        </div>
+        <div class="row form-group">
+            <div class="offset-md-3 col-md-9">
+                <button id="submitButton" class="btn btn-outline-dark btn-sm" disabled="disabled"><i class="fa fa-trash"></i> Excluir</button>
+                <a role="button" href="@Model.BackUrl" class="btn btn-outline-dark btn-sm ml-2"><i class="fa fa-times"></i> Cancelar</a>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <div class="row form-group">
+        <div class="offset-md-3 col-md-9">
+            <div class="alert alert-danger" role="alert">
+                <div>Não é possível excluir este registro.</div>
+                <div class="mt-1" style="white-space: pre-line">@Model.CannotProceed</div>
+            </div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="offset-md-3 col-md-9">
+            <a role="button" href="@Model.BackUrl" class="btn btn-outline-dark btn-sm"><i class="fa fa-times"></i> Cancelar</a>
+        </div>
+    </div>
+}
+
+
+
+@using (Html.BeginScripts())
+{
+    <script type="text/javascript">
+        $(function () {
+            var checkbox = $("#confirmation");
+            checkbox.on('change', function () {
+                var isChecked = checkbox.is(":checked");
+                $("#submitButton").attr("disabled", !isChecked);
+
+            });
+        });
+    </script>
+}

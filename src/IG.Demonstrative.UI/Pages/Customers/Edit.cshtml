@@ -1,0 +1,54 @@
+﻿@page "/cliente/{id}/editar"
+@model IG.Demonstrative.UI.Pages.Customers.EditModel
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<div class="row">
+    <div class="card w-100">
+        <div class="card-body">
+            <h4>Editar Cliente</h4>
+
+            <hr />
+
+            <form id="mainForm" method="post" class="mt-3">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="row form-group">
+                    <label asp-for="Data.Name" class="col-form-label col-md-3 text-right"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Data.Name" class="form-control form-control-sm" />
+                        <span asp-validation-for="Data.Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group mb-2">
+                    <div class="col-md-9 offset-md-3">
+                        <div class="checkbox">
+                            <input asp-for="Data.IsActive" />
+                            <label asp-for="Data.IsActive" class="align-middle"></label>
+                        </div>
+                        <span asp-validation-for="Data.IsActive" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-md-9 offset-md-3">
+                        <span class="text-danger">@Model.ErrorMessage</span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="offset-md-3 col-md-9">
+                        <button type="submit" class="btn btn-sm btn-outline-dark">Salvar</button>
+                        <a role="button" href="/cliente/@Model.Id" class="btn btn-sm btn-outline-dark ml-2">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

@@ -1,0 +1,35 @@
+﻿@page "/cliente/{id}"
+@model IG.Demonstrative.UI.Pages.Customers.DetailsModel
+@{
+    ViewData["Title"] = "Detalhes do Cliente";
+}
+
+<div class="row">
+    <div class="card w-100">
+        <div class="card-body">
+            <h4>Detalhes do Cliente</h4>
+
+            <hr />
+
+            <div class="input-group mb-3">
+                <div role="button" class="btn-group btn-group-sm">
+                    <a role="button" href="/clientes" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Voltar</a>
+                    <a role="button" href="" class="btn btn-outline-dark"><i class="fa fa-sync"></i> Atualizar</a>
+                </div>
+                @if (!Model.Data.IsDeleted)
+                {
+                    <div role="button" class="btn-group btn-group-sm ml-2">
+                        <a role="button" href="/cliente/@Model.Data.Id/editar" class="btn btn-outline-dark"><i class="fa fa-edit"></i> Editar</a>
+                        <a role="button" href="/cliente/@Model.Data.Id/excluir" class="btn btn-outline-dark"><i class="fa fa-trash"></i> Excluir</a>
+                    </div>
+                }
+            </div>
+
+            @{await Html.RenderPartialAsync("_Details", Model.Data);}
+
+            <hr />
+
+            @{await Html.RenderPartialAsync("_History", Model.History);}
+        </div>
+    </div>
+</div>

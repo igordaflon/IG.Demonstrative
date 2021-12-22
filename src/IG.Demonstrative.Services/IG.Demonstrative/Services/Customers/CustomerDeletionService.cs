@@ -40,13 +40,12 @@ namespace IG.Demonstrative.Services.Customers
             return Result.Ok();
         }
 
-        public async Task<Result> DeleteAsync(int id, ReasonModel reason)
+        public async Task<Result> DeleteAsync(int id)
         {
             var check = await CanBeDeletedAsync(id);
             if (check.IsFailed)
                 return check;
 
-            var description = string.IsNullOrEmpty(reason?.Description) ? "Registro excluído" : $"Registro excluído: {reason}";
 
             await context.Customer
                 .Where(i => i.Id == id)
@@ -58,7 +57,7 @@ namespace IG.Demonstrative.Services.Customers
             var history = new CustomerHistory
             {
                 CustomerId = id,
-                Description = description,
+                Description = "Deletado",
                 DateTime = DateTime.Now
             };
 

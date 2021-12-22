@@ -6,6 +6,6 @@ namespace IG.Demonstrative.Services.Customers
     public interface ICustomerDeletionService
     {
         Task<Result> CanBeDeletedAsync(int id);
-        Task<Result> DeleteAsync(int id, ReasonModel reason);
+        Task<Result> DeleteAsync(int id);
     }
 }
