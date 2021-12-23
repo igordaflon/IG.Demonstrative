@@ -11,7 +11,7 @@ namespace IG.Demonstrative.Models
     {
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "O campo '{0}' é obrigatório")]
-        [StringLength(64, ErrorMessage = "O campo '{0}' pode ter, no máximo, {2} caracteres")]
+        [StringLength(64, ErrorMessage = "O campo '{0}' pode ter, no máximo, {1} caracteres")]
         public string Name { get; set; }
         
         [Display(Name = "Ativo")]

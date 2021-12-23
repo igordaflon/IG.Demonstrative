@@ -20,7 +20,10 @@ namespace IG.Demonstrative.Services.Customers
         /// </summary>
         public async Task<int> CreateAsync(CustomerEditModel data)
         {
-            Helper.ValidateAnnotations(data);
+            if(data == null)
+                throw new ArgumentNullException(nameof(data));
+
+            ValidationHelper.ValidateAnnotations(data);
 
             if (await context.Customer.AnyAsync(i => i.Name == data.Name && !i.IsDeleted))
                 throw new ValidationException("O nome informado já existe");

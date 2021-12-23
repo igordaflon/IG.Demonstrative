@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IG.Demonstrative.Services
+namespace IG.Demonstrative
 {
-    public static class Helper
+    public static class ValidationHelper
     {
         public static void ValidateAnnotations(object obj) => Validator.ValidateObject(obj, new ValidationContext(obj), true);
     }
